@@ -2,14 +2,14 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 const Header = () => {
     return (
-        <div>
-            <div className='py-5 text-center md:flex justify-evenly items-center'>
+        <div className='my-4'>
+            <div className=' text-center md:flex justify-evenly items-center'>
 
 <h1 className=" font-bold text-3xl">CareerHub</h1>
 <div className='md:flex gap-4'>
 <NavLink to="/stat" className={({ isActive, isPending }) =>
 isPending ? "pending" : isActive ? "text-blue-500 underline" : ""
-}>Statistics</NavLink>
+}>Home</NavLink>
 <NavLink to="/AJ"  className={({ isActive, isPending }) =>
 isPending ? "pending" : isActive ? "text-blue-500 underline" : ""
 }>Applied Jobs</NavLink>
@@ -19,9 +19,7 @@ isPending ? "pending" : isActive ? "text-blue-500 underline" : ""
 </div>
 
 <div>
-    <NavLink to="/SA"  className={({ isActive, isPending }) =>
-isPending ? "pending" : isActive ? "text-blue-500 underline" : ""
-}>Start Applying</NavLink>
+    <NavLink to="/SA"> <button className='btn btn-accent'>Start Applying</button> </NavLink>
 </div>
 </div>
         </div>
